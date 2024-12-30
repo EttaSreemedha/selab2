@@ -1,0 +1,17 @@
+minikube start
+kubectl create deployment mynginx --image=nginx
+kubectl get deployments
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl scale deployment mynginx --replicas=4
+kubectl get deployments
+kubectl get pods
+kubectl port-forward svc/myngnix 8081:80
+kubectl delete deployment mynginx
+kubectl delete service mynginx
+minikube stop
+
+
+// naigos
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 asonrivers/nagios:latest
+

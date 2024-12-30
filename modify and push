@@ -1,0 +1,25 @@
+docker pull ubuntu
+docker run -it --name newubuntu -d ubuntu
+docker ps
+docker exec -it <id> bash
+git --version (wont there)
+apt update
+apt install git -y
+git --version
+exit (terminal exit)
+docker stop <id>
+docker commit <id> chinky/newubuntu2024
+docker login
+docker push chinky/newubuntu2024
+
+docker rm <id>
+docker rmi chinky/newubuntu2024
+docker logout
+
+docker pull chinky/newubuntu2024
+docker run --name newubuntu2024 it chinky/newubuntu2024
+git --version
+exit
+docker ps -a
+docker rm <id>
+docker rmi chinky/newubuntu2024
