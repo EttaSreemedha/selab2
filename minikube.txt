@@ -63,5 +63,18 @@ Result: Halts the local Kubernetes cluster and frees up resources. The configura
 
 // naigos
 docker pull jasonrivers/nagios:latest
-docker run --name nagiosdemo -p 8888:80 asonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+
+go localhosy 8888
+enter crentials......nagiosadmin.....nagios
+clich hosts on left side
+
+click on localhost
+
+another poweshell
+
+docker ps
+docker stop nagiosdemo 
+docker rm nagiosdemo
+docker rmi jasonrivers/nagios
 
