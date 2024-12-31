@@ -11,6 +11,56 @@ kubectl delete service mynginx
 minikube stop
 
 
+Commands Breakdown
+minikube start
+
+Purpose: Starts a local Kubernetes cluster using Minikube.
+Result: Sets up a single-node Kubernetes cluster locally, which can be used for development or testing.
+kubectl create deployment mynginx --image=nginx
+
+Purpose: Creates a Kubernetes deployment named mynginx using the nginx image from Docker Hub.
+Result: The deployment manages one or more pods running the nginx container.
+kubectl get deployments
+
+Purpose: Lists all deployments in the Kubernetes cluster.
+Result: Displays details like deployment name, replicas, available pods, and strategy.
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+
+Purpose: Creates a service to expose the mynginx deployment.
+--type=NodePort: Exposes the service on a port accessible from outside the cluster.
+--port=80: Specifies the port on the service.
+--target-port=80: Maps the service port to the container port (port on which Nginx listens).
+Result: Creates a service that allows access to the mynginx deployment from outside the cluster.
+kubectl scale deployment mynginx --replicas=4
+
+Purpose: Scales the mynginx deployment to 4 replicas (pods).
+Result: Ensures the deployment now manages 4 pods running the nginx container.
+kubectl get deployments
+
+Purpose: Verifies the current state of deployments.
+Result: Shows that the mynginx deployment now has 4 replicas.
+kubectl get pods
+
+Purpose: Lists all pods running in the cluster.
+Result: Displays the status of the pods, including those created by the mynginx deployment.
+kubectl port-forward svc/mynginx 8081:80
+
+Purpose: Forwards a local port (8081) to the service mynginx port (80) for testing.
+Result: You can access the service locally at http://localhost:8081.
+kubectl delete deployment mynginx
+
+Purpose: Deletes the mynginx deployment.
+Result: Terminates all pods and resources associated with the deployment.
+kubectl delete service mynginx
+
+Purpose: Deletes the mynginx service.
+Result: Removes the service, so the deployment is no longer accessible externally.
+minikube stop
+
+Purpose: Stops the Minikube cluster.
+Result: Halts the local Kubernetes cluster and frees up resources. The configuration remains intact for later use.
+
+
 // naigos
 docker pull jasonrivers/nagios:latest
 docker run --name nagiosdemo -p 8888:80 asonrivers/nagios:latest
