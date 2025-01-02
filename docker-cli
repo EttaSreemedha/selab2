@@ -1,5 +1,7 @@
 FROM nginx:alpine
 COPY . /usr/share/ngnix/html
+sudo docker build -t webapp .
+sudo docker run -d -p 80:80 webapp
 
 
 
