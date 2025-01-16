@@ -28,6 +28,42 @@ ls
 git status
 //////////////////////////////
 
+echo "This is file4" > file4.txt
+git status
+git add .
+git commit -m "4 added"
+{{ create new repo}}
+git remote remove origin
+git remote add origin <link>
+git remote -v
+git branch -M main
+git push -u origin main  ((changes in repo))
+git clone <link>
+{{ make changes in file3,txt in git}}
+git pull origin main
+cat file3.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
