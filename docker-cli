@@ -52,7 +52,7 @@ docker commit <id> chinky/redisnewimage (save to docker desktop)
 docker login
 docker push chinky/redisnewimage
 docker rm <id>
-docker rmi redisnewimage
+docker rmi chinky/redisnewimage
 
 docker pull chinky/redisnewimage
 docker run --name myredisnew -d chinky/redisnewimage
