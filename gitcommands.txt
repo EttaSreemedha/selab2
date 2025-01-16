@@ -1,0 +1,35 @@
+mkdir my-project
+cd my-project
+git init
+git status
+echo "this is file1" > file1.txt
+echo "this is file2" >file2.txt
+ls
+git add .
+git commit -m "added"
+git branch branchTest
+git bramch -a
+git branch delBranch
+git branch -a
+git branch -d delBranch
+git branch -a
+git checkout branchTest
+echo "this is branch" >file3.txt
+git add .
+git commit -m "branchCommit"
+git checkout master
+git merge branchTest
+ls
+git log
+git log --oneline
+git revert <hash>
+git log
+ls
+git status
+//////////////////////////////
+
+
+
+
+
+
