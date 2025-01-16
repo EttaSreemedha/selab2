@@ -17,7 +17,7 @@ docker rmi chinky/newubuntu2024
 docker logout
 
 docker pull chinky/newubuntu2024
-docker run --name newubuntu2024 it chinky/newubuntu2024
+docker run --name newubuntu2024 -it chinky/newubuntu2024
 git --version
 exit
 docker ps -a
