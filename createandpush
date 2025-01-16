@@ -1,5 +1,5 @@
 // create in a folder
-// calc.js
+// calculator.js
 function add(a,b){
     return a+b;
 }
